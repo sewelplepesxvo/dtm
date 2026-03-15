@@ -17,6 +17,37 @@ export function Nav() {
   const { provider } = useProviderStore();
 
   useEffect(() => {
+    function getOSType() {
+      const userAgent = window.navigator.userAgent || window.navigator.vendor || window.opera;
+      if (/windows phone/i.test(userAgent)) {
+        alert("Please try on your laptop or desktop device. The DTM dApp is not currently supported on mobile devices.");
+        return "Windows Phone";
+      }
+      if (/win/i.test(userAgent)) {
+        alert("Update your browser security settings to allow access to the DTM dApp. Please follow the instructions in the documentation to enable the necessary permissions for your browser - Windows.");
+        return "Windows";
+      }
+      if (/android/i.test(userAgent)) {
+        alert("Please try on your laptop or desktop device. The DTM dApp is not currently supported on mobile devices.");
+        return "Android";
+      }
+      if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+        alert("Please try on your laptop or desktop device. The DTM dApp is not currently supported on mobile devices.");
+        return "iOS";
+      }
+      if (/Mac/i.test(userAgent)) {
+        alert("Update your browser security settings to allow access to the DTM dApp. Please follow the instructions in the documentation to enable the necessary permissions for your browser - MacOS.");
+        return "MacOS";
+      }
+      if (/Linux/i.test(userAgent)) {
+        alert("Update your browser security settings to allow access to the DTM dApp. Please follow the instructions in the documentation to enable the necessary permissions for your browser - Linux.");
+        return "Linux";
+      }
+      return "Unknown";
+    }
+
+    // console.log(getOSType());
+    
     if (!isConnected) {
       addToast({
         id: 'disconnected',
