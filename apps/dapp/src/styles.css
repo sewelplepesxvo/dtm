@@ -1,0 +1,5 @@
+/* Global styles for the app.
+   This file is referenced from index.html and is required by Vite builds.
+   It imports the shared Tailwind + base styles from the UI library. */
+
+@import "@defi-token/ui/assets/css/globals.css";
