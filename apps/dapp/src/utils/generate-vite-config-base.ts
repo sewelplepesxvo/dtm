@@ -51,6 +51,7 @@ export function generateViteConfigBase(
           modulePath,
           '../../libs/blockchain/src'
         ),
+        '@react-native-async-storage/async-storage': false,
       },
     },
 
@@ -61,6 +62,7 @@ export function generateViteConfigBase(
         },
       },
       include: ['tailwindcss', '@tailwindcss/forms', '@tailwindcss/typography'],
+      exclude: ['@react-native-async-storage/async-storage'],
     },
 
     build: {
