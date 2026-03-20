@@ -9,7 +9,9 @@
     "build": {
       "executor": "@nx/vite:build",
       "outputs": ["{projectRoot}/../../dist/apps/dapp"],
-      "options": {},
+      "options": {
+        "outputPath": "{projectRoot}/../../dist/apps/dapp"
+      },
       "defaultConfiguration": "production",
       "configurations": {
         "development": {
