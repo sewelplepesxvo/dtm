@@ -6,7 +6,7 @@
     "dev": "npx nx run dapp:serve",
     "prepare": "echo 'skip prepare'",
     "build": "npm run build:dapp",
-    "vercel-build": "npm run build",
+    "vercel-build": "npx nx reset && npm run build",
     "build:dapp": "npx nx run dapp:build",
     "lint:dapp": "npx nx run dapp:lint",
     "preview:dapp": "npx nx run dapp:preview",
