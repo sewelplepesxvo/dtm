@@ -11,6 +11,20 @@
       "options": {
         "commands": ["npm install --prefix libs/ui"]
       }
+    },
+    "build": {
+      "executor": "@nx/vite:build",
+      "outputs": ["{projectRoot}/../../dist/libs/ui"],
+      "options": {},
+      "defaultConfiguration": "production",
+      "configurations": {
+        "development": {
+          "mode": "development"
+        },
+        "production": {
+          "mode": "production"
+        }
+      }
     }
   }
 }
