@@ -14,7 +14,6 @@
     ],
     "sharedGlobals": []
   },
-  "nxCloudId": "670bcf6875f3520ee8b55405",
   "plugins": [
     {
       "plugin": "@nx/vite/plugin",
